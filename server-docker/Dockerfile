@@ -4,7 +4,7 @@ RUN pip install https://github.com/OpenNMT/OpenNMT-py/archive/refs/heads/master.
 RUN pip install flask
 
 ENV IP="0.0.0.0"
-ENV PORT=4000
+ENV PORT=5000
 ENV URL_ROOT="/"
 ENV CONFIG="./tin.json"
 
