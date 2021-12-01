@@ -6,8 +6,8 @@ from urllib.request import urlopen
 from os import makedirs
 from os.path import join
 
-mai_lukdui = re.compile('（.+?）')
-
+mai_lukdui = re.compile('(.+|【.+|(.+')
+mai_hakkaf = re.compile('（.+|【.+')
 
 def main():
     miang = '/ngienbun-ngiliau'
@@ -22,7 +22,7 @@ def main():
                     fa = fa.strip()
                     if meu:
                         print(mai_lukdui.sub('', meu), file=meu_dong)
-                        print(fa, file=fa_dong)
+                        print(mai_hakkaf.sub('',fa), file=fa_dong)
 
 
 def ngin():
