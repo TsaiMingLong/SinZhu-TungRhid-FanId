@@ -6,8 +6,8 @@ from urllib.request import urlopen
 from os import makedirs
 from os.path import join
 
-mai_lukdui = re.compile('【.+?】')
-mai_hakkaf = re.compile('【.+?】')
+mai_lukdui = re.compile('(.+?】|【.+?】|（.+?）')
+mai_hakkaf = re.compile('（.+?】|【.+?】|（.+?）')
 
 def main():
     miang = '/ngienbun-ngiliau'
